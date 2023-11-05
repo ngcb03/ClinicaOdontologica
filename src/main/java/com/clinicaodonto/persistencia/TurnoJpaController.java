@@ -32,8 +32,8 @@ public class TurnoJpaController implements Serializable {
     
     public static TurnoJpaController getInstance(){
         if(turnoJPA == null){
-            return turnoJPA = new TurnoJpaController();
-        } return null;
+            TurnoJpaController.turnoJPA = new TurnoJpaController();
+        } return TurnoJpaController.turnoJPA;
     }
     
     public TurnoJpaController(EntityManagerFactory emf) {

@@ -30,8 +30,8 @@ public class PersonaJpaController implements Serializable {
     
     public static PersonaJpaController getInstance(){
         if(personJPA == null){
-            return personJPA = new PersonaJpaController();
-        } return null;
+            PersonaJpaController.personJPA = new PersonaJpaController();
+        } return PersonaJpaController.personJPA;
     }
     
     public PersonaJpaController(EntityManagerFactory emf) {

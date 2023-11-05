@@ -8,11 +8,13 @@ com\clinicaodonto\logica\Turno.class
 com\clinicaodonto\persistencia\UsuarioJpaController.class
 com\clinicaodonto\logica\Controladora.class
 com\clinicaodonto\logica\Persona_.class
+com\clinicaodonto\servlets\SvElimUsuarios.class
 com\clinicaodonto\persistencia\exceptions\NonexistentEntityException.class
 com\clinicaodonto\persistencia\TurnoJpaController.class
 com\clinicaodonto\logica\Usuario_.class
 com\clinicaodonto\logica\Paciente_.class
 com\clinicaodonto\persistencia\PacienteJpaController.class
+com\clinicaodonto\servlets\SvEditUsuarios.class
 com\clinicaodonto\logica\Horario.class
 com\clinicaodonto\persistencia\exceptions\PreexistingEntityException.class
 com\clinicaodonto\persistencia\exceptions\IllegalOrphanException.class

@@ -32,8 +32,8 @@ public class OdontologoJpaController implements Serializable {
     
     public static OdontologoJpaController getInstance(){
         if(odontoJPA == null){
-            return odontoJPA = new OdontologoJpaController();
-        } return null;
+            OdontologoJpaController.odontoJPA = new OdontologoJpaController();
+        } return OdontologoJpaController.odontoJPA;
     }
     
     public OdontologoJpaController(EntityManagerFactory emf) {

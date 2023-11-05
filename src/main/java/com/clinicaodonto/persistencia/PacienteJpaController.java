@@ -32,8 +32,8 @@ public class PacienteJpaController implements Serializable {
     
     public static PacienteJpaController getInstance(){
         if(pacienteJPA == null){
-            return pacienteJPA = new PacienteJpaController();
-        } return null;
+           PacienteJpaController.pacienteJPA = new PacienteJpaController();
+        } return PacienteJpaController.pacienteJPA;
     }
     
     public PacienteJpaController(EntityManagerFactory emf) {

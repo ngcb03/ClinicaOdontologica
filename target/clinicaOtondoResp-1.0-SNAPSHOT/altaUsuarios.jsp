@@ -51,6 +51,8 @@
           <label for="rol_usu">Rol usuario:</label>
           <select name="rol_usu" id="rol_usu" class="form-control form-control-lg">
             <option value="administrador">Administrador</option>
+            <option value="odontologo">Odontólogo</option>
+            <option value="secretario">Secretario</option>
             <option value="invitado" selected>Invitado</option>
           </select>
         </div>

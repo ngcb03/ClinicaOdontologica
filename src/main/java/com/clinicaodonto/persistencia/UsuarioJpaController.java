@@ -30,8 +30,8 @@ public class UsuarioJpaController implements Serializable {
     
     public static UsuarioJpaController getInstance(){
         if(usuJPA == null){
-            return usuJPA = new UsuarioJpaController();
-        } return null;
+            UsuarioJpaController.usuJPA = new UsuarioJpaController();
+        } return UsuarioJpaController.usuJPA;
     }
     
     public UsuarioJpaController(EntityManagerFactory emf) {

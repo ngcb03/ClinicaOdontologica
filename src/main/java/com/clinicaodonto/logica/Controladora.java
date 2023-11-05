@@ -1,6 +1,7 @@
 package com.clinicaodonto.logica;
 
 import com.clinicaodonto.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 
 public class Controladora {
@@ -21,9 +22,9 @@ public class Controladora {
     }
     
     public static Controladora getInstance(){
-        if(control == null){
-            return control = new Controladora();
-        } return null;
+        if(Controladora.control == null){
+            Controladora.control = new Controladora();
+        } return Controladora.control;
     }
     
     // CRUD HORARIO 
@@ -63,6 +64,14 @@ public class Controladora {
         Controladora.usuario.setRol(rol_usu);
         
         Controladora.controlPersis.crearUsuario(Controladora.usuario);
+    }
+
+    public List<Usuario> traerUsuarios() {
+        return Controladora.controlPersis.traerUsuarios();
+    }
+
+    public void eliminarUsuario(int id_usuario) {
+        Controladora.controlPersis.eliminarUsuario(id_usuario);
     }
     
     

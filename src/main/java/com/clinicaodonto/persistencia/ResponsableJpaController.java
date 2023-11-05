@@ -30,8 +30,8 @@ public class ResponsableJpaController implements Serializable {
     
     public static ResponsableJpaController getInstance(){
         if(responJPA == null){
-            return responJPA = new ResponsableJpaController();
-        } return null;
+            ResponsableJpaController.responJPA = new ResponsableJpaController();
+        } return ResponsableJpaController.responJPA;
     }
     
     public ResponsableJpaController(EntityManagerFactory emf) {

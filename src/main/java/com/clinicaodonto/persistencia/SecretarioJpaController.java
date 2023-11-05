@@ -30,8 +30,8 @@ public class SecretarioJpaController implements Serializable {
     
     public static SecretarioJpaController getInstance(){
         if(secreJPA == null){
-            return secreJPA = new SecretarioJpaController();
-        } return null;
+            SecretarioJpaController.secreJPA = new SecretarioJpaController();
+        } return SecretarioJpaController.secreJPA;
     }
     
     public SecretarioJpaController(EntityManagerFactory emf) {

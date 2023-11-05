@@ -9,11 +9,15 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.util.List;
 
 @WebServlet(name = "SvUsuarios", urlPatterns = {"/SvUsuarios"})
 public class SvUsuarios extends HttpServlet {
 
     private static Controladora control = Controladora.getInstance();
+    private static List<Usuario> listaUsuarios;
+    private static HttpSession miSession;
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -25,8 +29,10 @@ public class SvUsuarios extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        
-        
+        SvUsuarios.listaUsuarios = SvUsuarios.control.traerUsuarios();
+        SvUsuarios.miSession = request.getSession();
+        miSession.setAttribute("listaUsuarios", SvUsuarios.listaUsuarios);
+        response.sendRedirect("verUsuarios.jsp");
     }
 
     @Override

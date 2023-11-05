@@ -30,8 +30,8 @@ public class HorarioJpaController implements Serializable {
     
     public static HorarioJpaController getInstance(){
         if(horarioJPA == null){
-            return horarioJPA = new HorarioJpaController();
-        } return null;
+            HorarioJpaController.horarioJPA = new HorarioJpaController();
+        } return HorarioJpaController.horarioJPA;
     }
     
     public HorarioJpaController(EntityManagerFactory emf) {

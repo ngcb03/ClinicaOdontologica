@@ -113,7 +113,14 @@
         >
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Acciones:</h6>
-            <a class="collapse-item" href="#">Ver Usuarios</a>
+            <!-- 
+                Si se crea un enlace en una página web que apunta a un servlet 
+                sin especificar explícitamente el método HTTP a utilizar, la 
+                solicitud por defecto será una solicitud HTTP GET. Esto significa 
+                que, al hacer clic en el enlace, se ejecutará el método doGet() 
+                del servlet al que apunta el enlace. 
+            -->
+            <a class="collapse-item" href="SvUsuarios">Ver Usuarios</a>
             <a class="collapse-item" href="altaUsuarios.jsp"
               >Alta Usuarios</a
             >

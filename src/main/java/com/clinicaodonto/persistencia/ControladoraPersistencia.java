@@ -1,6 +1,10 @@
 package com.clinicaodonto.persistencia;
 
 import com.clinicaodonto.logica.Usuario;
+import com.clinicaodonto.persistencia.exceptions.NonexistentEntityException;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class ControladoraPersistencia {
@@ -20,9 +24,9 @@ public class ControladoraPersistencia {
     }
     
     public static ControladoraPersistencia getInstance(){
-        if(controlPersis == null){
-            return controlPersis = new ControladoraPersistencia();
-        } return null;
+        if(null == ControladoraPersistencia.controlPersis){
+            ControladoraPersistencia.controlPersis = new ControladoraPersistencia();
+        } return ControladoraPersistencia.controlPersis;
     }
     
     
@@ -57,7 +61,19 @@ public class ControladoraPersistencia {
     // CRUD USUARIO JPA
 
     public void crearUsuario(Usuario usuario) {
-        usuJPA.create(usuario);
+        ControladoraPersistencia.usuJPA.create(usuario);
+    }
+
+    public List<Usuario> traerUsuarios() {
+        return ControladoraPersistencia.usuJPA.findUsuarioEntities();
+    }
+
+    public void eliminarUsuario(int id_usuario) {
+        try {
+            ControladoraPersistencia.usuJPA.destroy(id_usuario);
+        } catch (NonexistentEntityException ex) {
+            Logger.getLogger(ControladoraPersistencia.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     
