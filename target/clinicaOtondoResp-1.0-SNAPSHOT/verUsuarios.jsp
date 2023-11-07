@@ -47,20 +47,20 @@
                             <td><%=usuario.getNombre()%></td>
                             <td><%=usuario.getRol()%></td>
                             <td style="display: flex; width: 196px;">
-                                <form name="editar" action="SvEditUsuarios" method="POST">
+                                <form name="editar" action="SvEditUsuarios" method="GET">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                         style="margin-right: 5px;">
                                         <i class="fas fa-pencil-alt"></i> Editar
                                     </button>
                                     <!-- El input funciona en lugares donde no se requiera visualizar el id -->
-                                    <input type="hidden" name="id_usuario_sub1" value="<%=usuario.getIdUsuario()%>">
+                                    <input type="hidden" name="usuario" value="<%=usuario.getIdUsuario()%>">
                                 </form>
                                 <form name="eliminar" action="SvElimUsuarios" method="POST">
                                     <button type="submit" class="btn btn-primary btn-user btn-block" 
                                         style="background-color: red; margin-left: 5px;">
                                         <i class="fas fa-trash-alt"></i> Eliminar
                                     </button>
-                                    <input type="hidden" name="id_usuario_sub2" value="<%=usuario.getIdUsuario()%>">
+                                    <input type="hidden" name="usuario" value="<%=usuario.getIdUsuario()%>">
                                 </form>
                             </td>
                         </tr>

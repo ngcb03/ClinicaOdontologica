@@ -31,7 +31,7 @@ public class SvElimUsuarios extends HttpServlet {
             throws ServletException, IOException {
         processRequest(request, response);
         
-        SvElimUsuarios.id_usuario = Integer.parseInt(request.getParameter("id_usuario_sub2"));
+        SvElimUsuarios.id_usuario = Integer.parseInt(request.getParameter("usuario"));
         SvElimUsuarios.control.eliminarUsuario(SvElimUsuarios.id_usuario);
         
         response.sendRedirect("SvUsuarios");

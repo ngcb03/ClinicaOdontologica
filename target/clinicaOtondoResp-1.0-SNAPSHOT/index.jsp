@@ -9,15 +9,12 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <p class="mb-4">Chart.js is a third party plugin that is used to generate the charts in this theme.
-                        The charts below have been customized - for further customization options, please visit the <a
-                            target="_blank" href="https://www.chartjs.org/docs/latest/">official Chart.js
-                            documentation</a>.</p>
+                    <p class="mb-4">¡Bienvenido a la Clínica Odontológica Salud Dental Total!</p>
 
                     <!-- Content Row -->
                     <div class="row">
 
-                        <div class="col-xl-6 col-lg-7">
+                        <div class="col-xl-5 col-lg-7">
 
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
@@ -31,7 +28,32 @@
 
                         <!-- Donut Chart -->
                         <div class="col-xl-4 col-lg-4">
-                            <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.</p>
+                            <p>
+                            En Salud Dental Total, nos enorgullece ofrecer una experiencia 
+                            de atención dental de primera clase a nuestros pacientes. Estamos 
+                            comprometidos con su salud bucal y su bienestar, y para lograrlo, 
+                            hemos desarrollado un sistema en línea que revolucionará la forma 
+                            en que gestionamos las citas y recursos clínicos.
+                            </p>
+                            <p>Nuestro sitio web está diseñado pensando en usted, brindando la 
+                                comodidad y la eficiencia que se merece. Con nuestra plataforma, 
+                                podrá programar sus citas fácilmente, verificar la disponibilidad 
+                                de horarios y asignar turnos de manera conveniente, todo desde 
+                                la comodidad de su hogar.
+                            </p>
+                            <p>Nuestro equipo de profesionales altamente calificados y apasionados 
+                                por la odontología está listo para atender sus necesidades y 
+                                brindarle un servicio excepcional. Sabemos lo valioso que es su 
+                                tiempo, y nuestro sistema le ayudará a aprovechar al máximo su 
+                                visita a nuestra clínica.
+                            </p>
+                            <p>Gracias por confiar en Salud Dental Total para su atención dental. 
+                                Estamos emocionados de servirle y de trabajar juntos para mantener su 
+                                sonrisa saludable y radiante. Explore nuestro sitio web, programe su 
+                                próxima cita y descubra la diferencia que marca la excelencia en la 
+                                atención odontológica.
+                            </p>
+                            <p>¡Bienvenidos a la sonrisa perfecta en Salud Dental Total!</p>
                         </div>
                     </div>
 

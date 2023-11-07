@@ -48,7 +48,7 @@ public class SvUsuarios extends HttpServlet {
         if(contrasenia_usu.equals(contrasenia_usu2)){
             SvUsuarios.control.crearUsuario(nombre_usu, contrasenia_usu, rol_usu);
         } else {
-            
+            System.out.println("Las contrsañas del usuario " + nombre_usu + "no coinciden!");
         }
                 
         response.sendRedirect("altaUsuarios.jsp");

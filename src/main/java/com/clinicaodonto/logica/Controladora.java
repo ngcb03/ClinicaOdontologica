@@ -73,6 +73,20 @@ public class Controladora {
     public void eliminarUsuario(int id_usuario) {
         Controladora.controlPersis.eliminarUsuario(id_usuario);
     }
+
+    public Usuario traerUsuario(int id_usuario) {
+        return Controladora.controlPersis.traerUsuario(id_usuario);
+    }
+
+    public void editarUsuario(int id_usuario, String nombre_usu, String contrasenia_usu, String rol_usu) {
+        Controladora.usuario = new Usuario();
+        Controladora.usuario.setIdUsuario(id_usuario);
+        Controladora.usuario.setNombre(nombre_usu);
+        Controladora.usuario.setContrasenia(contrasenia_usu);
+        Controladora.usuario.setRol(rol_usu);
+        Controladora.controlPersis.editarUsuario(Controladora.usuario);
+    }
+    
     
     
     
