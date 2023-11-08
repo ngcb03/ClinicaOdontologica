@@ -1,4 +1,15 @@
+<%@page import="jakarta.servlet.http.HttpSession"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!-- VALIDACIÓN INGRESO USUARIO -->
+<%
+    HttpSession miSession = request.getSession();
+    System.out.println("Acceso estado: " + (Boolean) request.getSession().getAttribute("sesionActiva"));
+    if(request.getSession().getAttribute("sesionActiva") == null){
+        response.sendRedirect("errorAcceso.jsp");
+    }
+%>
+
 <body id="page-top">
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -205,7 +216,7 @@
               aria-expanded="false"
             >
               <span class="mr-2 d-none d-lg-inline text-gray-600 small"
-                >Douglas McGee</span
+                ><%=request.getSession().getAttribute("usuario")%></span
               >
               <img
                 class="img-profile rounded-circle"
@@ -217,29 +228,16 @@
               class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
               aria-labelledby="userDropdown"
             >
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                Profile
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                Settings
-              </a>
-              <a class="dropdown-item" href="#">
-                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                Activity Log
-              </a>
-              <div class="dropdown-divider"></div>
               <a
                 class="dropdown-item"
-                href="#"
-                data-toggle="modal"
-                data-target="#logoutModal"
+                href="SvLogin"
+                data-toggle=""
+                data-target=""
               >
                 <i
                   class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
                 ></i>
-                Logout
+                Salir
               </a>
             </div>
           </li>

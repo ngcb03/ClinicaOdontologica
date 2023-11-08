@@ -27,7 +27,7 @@
                         </div>
 
                         <!-- Donut Chart -->
-                        <div class="col-xl-4 col-lg-4">
+                        <div class="col-xl-6 col-lg-5">
                             <p>
                             En Salud Dental Total, nos enorgullece ofrecer una experiencia 
                             de atención dental de primera clase a nuestros pacientes. Estamos 

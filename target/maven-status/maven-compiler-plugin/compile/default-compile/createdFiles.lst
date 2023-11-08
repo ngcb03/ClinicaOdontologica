@@ -1,5 +1,6 @@
 com\clinicaodonto\persistencia\ResponsableJpaController.class
 com\clinicaodonto\logica\Turno_.class
+com\clinicaodonto\servlets\SvLogin.class
 com\clinicaodonto\logica\Responsable_.class
 com\clinicaodonto\logica\Secretario.class
 com\clinicaodonto\logica\Secretario_.class

@@ -86,6 +86,23 @@ public class Controladora {
         Controladora.usuario.setRol(rol_usu);
         Controladora.controlPersis.editarUsuario(Controladora.usuario);
     }
+
+    
+    
+    // COMPLEMENTOS Y VALIDACIONES
+    
+    public boolean validarLogin(String nombre_usu, String contrasenia_usu) {
+        
+        List<Usuario> listaUsuarios = Controladora.controlPersis.traerUsuarios();
+        
+        for(Usuario usuario: listaUsuarios){
+            if(usuario.getNombre().equals(nombre_usu) && 
+                    usuario.getContrasenia().equals(contrasenia_usu)){
+                return true;
+            }
+        } return false;
+        
+    }
     
     
     
